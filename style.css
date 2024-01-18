@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +13,6 @@ body {
 }
 
 .calc-container {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,13 +37,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
     flex-grow: 1;
     width: 50px;
     height: 50px;
     border-radius: 100px;
 }
 
+.grey-btns {
+    background-color: rgb(191, 219, 215);
+}
+
+.orange-btns {
+    background-color: rgb(166, 255, 0);
+    color: white;
+}
+
+.dark-grey-btns {
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
 .btn-0 {
     flex-basis: 115px;
+    justify-content: flex-start;
 }
