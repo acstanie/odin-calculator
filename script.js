@@ -1,10 +1,10 @@
 const btns = document.querySelectorAll(".btns");
 const calcDisplay = document.querySelector(".calc-display");
 
-
 const display = document.createElement("div");
 display.classList.toggle("display");
 calcDisplay.appendChild(display);
+
 
 const one = document.querySelector(".btn-1");
 const two = document.querySelector(".btn-2");
@@ -24,8 +24,7 @@ for(let btn of btns) {
 }
 
 one.addEventListener("click", (e) => {
-    display.innerHTML += "1";
-    calcDisplay.appendChild(display);
+    display.textContent += "1";
     
 });
 
