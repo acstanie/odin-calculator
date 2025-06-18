@@ -3,31 +3,90 @@ const calcDisplay = document.querySelector(".calc-display");
 
 const display = document.createElement("div");
 display.classList.toggle("display");
+display.textContent = '0';
 calcDisplay.appendChild(display);
 
-
-const one = document.querySelector(".btn-1");
-const two = document.querySelector(".btn-2");
-const three = document.querySelector(".btn-3");
-const four = document.querySelector(".btn-4");
-const five = document.querySelector(".btn-5");
-const six = document.querySelector(".btn-6");
-const seven = document.querySelector(".btn-7");
-const eight = document.querySelector(".btn-8");
-const nine = document.querySelector(".btn-9");
-const zero = document.querySelector(".btn-0");  
-
-for(let btn of btns) {
-    btn.addEventListener("mouseenter", (e) => {
+btns.forEach((btn) => {
+     btn.addEventListener("mouseenter", (e) => {
         btn.style.cursor = "pointer";
     });
-}
+});
 
-one.addEventListener("click", (e) => {
-    display.textContent += "1";
+btns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        if (e.target.className === 'btns btn-1 dark-grey-btns') {
+            if (display.textContent === "0") {
+                display.textContent = "";
+            }
     
+            display.textContent += "1";
+        }
+        if (e.target.className === 'btns btn-2 dark-grey-btns') {
+            if (display.textContent === "0") {
+                display.textContent = "";
+            }
+            display.textContent += "2";
+        }
+        if (e.target.className === 'btns btn-3 dark-grey-btns') {
+            if (display.textContent === "0") {
+                display.textContent = "";
+            }
+            display.textContent += "3";
+        }
+        if (e.target.className === 'btns btn-4 dark-grey-btns') {
+            if (display.textContent === "0") {
+                display.textContent = "";
+            }
+            display.textContent += "4";
+        }
+        if (e.target.className === 'btns btn-5 dark-grey-btns') {
+            if (display.textContent === "0") {
+                display.textContent = "";
+            }
+            display.textContent += "5";
+        }
+        if (e.target.className === 'btns btn-6 dark-grey-btns') {
+            if (display.textContent === "0") {
+                display.textContent = "";
+            }
+            display.textContent += "6";
+        }
+        if (e.target.className === 'btns btn-7 dark-grey-btns') {
+            if (display.textContent === "0") {
+                display.textContent = "";
+            }
+            display.textContent += "7";
+        }
+        if (e.target.className === 'btns btn-8 dark-grey-btns') {
+            if (display.textContent === "0") {
+                display.textContent = "";
+            }
+            display.textContent += "8";
+        }
+        if (e.target.className === 'btns btn-9 dark-grey-btns') {
+            if (display.textContent === "0") {
+                display.textContent = "";
+            }
+            display.textContent += "9";
+        }
+        if (e.target.className === 'btns btn-0 dark-grey-btns') {
+            if (display.textContent === "0") {
+                display.textContent = "";
+            }
+            display.textContent += "0";
+        }
+        if (e.target.className === 'btns dark-grey-btns decimal') {
+            display.textContent += ".";
+        }
+
+        if (e.target.className === 'btns grey-btns clear') {
+            display.textContent = "0";
+        }
+        
+        console.log(e.target.className)
+    });
 });
 
-two.addEventListener("click", (e) => {
-    display.textContent += "2";
-});
+// let num = -2
+
+// console.log(0 - num)
